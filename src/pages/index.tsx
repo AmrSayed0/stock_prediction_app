@@ -22,6 +22,22 @@ export default function Home() {
     }
   };
 
+  const fetchReport = async (data: string) => {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/report", {
+        method: "POST",
+        body: JSON.stringify({ data }),
+      });
+      const result = await res.json();
+      setReport(result.report || "No report generated.");
+    } catch {
+      setReport("Error generating report.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const fetchStockData = async () => {
     setLoading(true);
     try {
@@ -33,7 +49,7 @@ export default function Home() {
           return res.text();
         })
       );
-      setReport(responses.join("\n"));
+      await fetchReport(responses.join("\n"));
     } catch (err) {
       setReport("Error fetching data.");
       console.error(err);
@@ -57,10 +73,11 @@ export default function Home() {
           alt="Logo"
           width={600}
           height={120}
+          priority
           style={{
             width: "100%",
-            maxWidth: 600,
             height: "auto",
+            maxWidth: 600,
             display: "block",
           }}
         />
@@ -90,7 +107,6 @@ export default function Home() {
                   <Image
                     src="/images/add.svg"
                     alt="Add"
-                    className={styles.addSvg}
                     width={24}
                     height={24}
                   />
