@@ -1,0 +1,200 @@
+.main {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.actionPanel {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+
+.labelError {
+  color: #e53935 !important;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.formInputControl {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.addBtn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addBtn:hover {
+  background: #2563eb;
+}
+
+.tickerDisplay {
+  min-height: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.ticker {
+  background: #e2e8f0;
+  color: #1a1a1a;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.generateBtn {
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.generateBtn:hover {
+  background: #059669;
+}
+
+.generateBtn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.tagLine {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.loadingPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.loadingPanel p {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.outputPanel {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 600px;
+}
+
+.outputTitle {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  padding: 1em;
+  border: 2px solid black;
+  border-right: none;
+  flex: 1;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  font-size: 3em;
+  padding: 0 0.35em;
+  cursor: pointer;
+  border: 2px solid;
+}
+
+.addSvg {
+  width: 14px;
+}
+
+.generateBtn {
+  width: 70%;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  font-family: "Poppins", sans;
+  border: 2px solid black;
+  background-color: #46ff90;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  font-size: 105%;
+}
+
+.footer {
+  font-size: 14px;
+  text-align: center;
+}
